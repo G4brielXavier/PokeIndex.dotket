@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: #d8d8d8;
+}
+
+.top_pokedex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 20px;
+    padding: 50px;
+}
+
+.top_pokedex div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.top_pokedex img {
+    width: 25px;
+    border-radius: 50px;
+    opacity: 0.5;
+}
+
+.top_pokedex h1 {
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.content_pokedex {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-content: center;
+    padding: 10px 0;
+
+    max-height: 460px;
+    overflow-y: scroll;
+}
+
+
+/* Filter Controllers */
+
+#pokemons_qty {
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+
+.controllers_filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    background-color: rgb(0, 0, 0, 0.05);
+    height: 60px;
+    padding: 5px 10px;
+}
+
+.controllers_filters div label {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.controllers_filters div input {
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0, 0.5);
+    padding: 5px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+}
+
+
+#btn_apply {
+    padding: 5px 10px;
+    border: none;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: 0.2s;
+}

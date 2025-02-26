@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2016/07/23/13/21/pokemon-1536855_1280.png" type="image/x-icon">
+    <title>Pokedex</title>
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pokemon_box.css">
+    <link rel="stylesheet" href="./assets/css/type_styles.css">
+
+</head>
+<body>
+    
+
+    <header class="top_pokedex">
+        <div>
+            <img src="https://banner2.cleanpng.com/20180705/ghi/aaxk15gpk.webp" alt="icon_pokedex">
+            <h1>PokedexViewer</h1>
+        </div>
+        <p>powered by <a href="https://pokeapi.co/">PokeApi</a></p>
+    </header>
+
+    <section class="controllers_filters">
+        <span id="pokemons_qty">0 Pokemons</span>
+        
+        <div>
+            <label for="offset">Offset:</label>
+            <input type="number" name="offset" id="offset_pokemon" value="0">
+        </div>
+
+        <div>
+            <label for="limit">Limit:</label>
+            <input type="number" name="limit" id="limit_pokemon" value="200">
+        </div>
+
+        <button id="btn_apply">Apply Changes</button>
+    </section>
+
+    <ol class="content_pokedex">
+    </ol>
+
+
+    <!-- SCRIPTS -->
+    <script src="./assets/js/pokeClass.js"></script>
+    <script src="./assets/js/fetch_pokeApi.js"></script>
+    <script src="./assets/js/pokeApiManager.js"></script>
+</body>
+</html>
