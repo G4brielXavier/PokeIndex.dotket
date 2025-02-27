@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2016/07/23/13/21/pokemon-1536855_1280.png" type="image/x-icon">
-    <title>Pokedex</title>
+    <title>PokeViewer by Gabriel Xavier</title>
 
     <!-- EXTERNAL CSS -->
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/pokemon_box.css">
     <link rel="stylesheet" href="./assets/css/type_styles.css">
+    <link rel="stylesheet" href="./assets/css/modal_view_pokemon.css">
 
 </head>
 <body>
@@ -18,14 +19,15 @@
 
     <header class="top_pokedex">
         <div>
-            <img src="https://banner2.cleanpng.com/20180705/ghi/aaxk15gpk.webp" alt="icon_pokedex">
-            <h1>PokedexViewer</h1>
+            <img src="https://cdn.pixabay.com/photo/2016/07/23/13/21/pokemon-1536855_1280.png" alt="icon_pokedex">
+            <h1>PokedexViewer by <a href="https://dotxavierket.dev" target="_blank">Gabriel Xavier</a></h1>
         </div>
         <p>powered by <a href="https://pokeapi.co/">PokeApi</a></p>
     </header>
 
     <section class="controllers_filters">
         <span id="pokemons_qty">0 Pokemons</span>
+        <span id="totalpokemons_qty">0 Pokemons Total</span>
         
         <div>
             <label for="offset">Offset:</label>
@@ -43,10 +45,16 @@
     <ol class="content_pokedex">
     </ol>
 
+    <div class="modal_pokemon_quickdetail_closed">
+        <img src="" alt="icon_pokemonname_view" id="view_icon_pokemon">
+        <h1 id="pokemon_name_view">Pokemon Name</h1>
+    </div>
+
 
     <!-- SCRIPTS -->
     <script src="./assets/js/pokeClass.js"></script>
     <script src="./assets/js/fetch_pokeApi.js"></script>
     <script src="./assets/js/pokeApiManager.js"></script>
+    <script src="./assets/js/modalController.js"></script>
 </body>
 </html>

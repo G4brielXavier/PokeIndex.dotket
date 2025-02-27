@@ -12,7 +12,8 @@ html, body {
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
-    background-color: #d8d8d8;
+    background-color: #1d1d1d;
+    color: #ffffff;
 }
 
 .top_pokedex {
@@ -22,7 +23,7 @@ body {
     justify-content: space-around;
 
     gap: 20px;
-    padding: 50px;
+    padding: 20px;
 }
 
 .top_pokedex div {
@@ -35,12 +36,23 @@ body {
 .top_pokedex img {
     width: 25px;
     border-radius: 50px;
-    opacity: 0.5;
+    transform: rotateZ(-30deg);
 }
 
 .top_pokedex h1 {
     font-size: 18px;
+    font-weight: 300;
+}
+
+a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p {
     opacity: 0.5;
+    font-weight: 300;
 }
 
 .content_pokedex {
@@ -53,15 +65,15 @@ body {
     justify-content: center;
     padding: 10px 0;
 
-    max-height: 460px;
+    max-height: 520px;
     overflow-y: scroll;
 }
 
 
 /* Filter Controllers */
 
-#pokemons_qty {
-    font-size: 15px;
+#pokemons_qty, #totalpokemons_qty {
+    font-size: 12px;
     opacity: 0.5;
 }
 
@@ -73,19 +85,19 @@ body {
     justify-content: center;
     gap: 20px;
 
-    background-color: rgb(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.02);
     height: 60px;
     padding: 5px 10px;
 }
 
 .controllers_filters div label {
-    color: rgb(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .controllers_filters div input {
     border: none;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
-    color: rgb(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
     padding: 5px;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 14px;
@@ -98,7 +110,56 @@ body {
     padding: 5px 10px;
     border: none;
     font-family: 'Hanken Grotesk', sans-serif;
+    background-color: red;
+    color: #fff;
     font-size: 15px;
-    border-radius: 5px;
     transition: 0.2s;
+    cursor: pointer;
+}
+
+#btn_apply:hover {background-color: rgb(97, 0, 0);}
+
+
+
+
+@media (max-width: 900px)
+{
+    .content_pokedex {
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15% 15% 15%;
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .controllers_filters {
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+    }
+    #pokemons_qty, #totalpokemons_qty {
+        font-size: 16px;
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .content_pokedex {
+        display: grid;
+        grid-template-columns: 22% 22% 22% 22%;
+        max-height: 600px;
+    }
+
+    .top_pokedex h1 {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .top_pokedex img {
+        width: 18px;
+        border-radius: 50px;
+        transform: rotateZ(-30deg);
+    }
 }

@@ -1,9 +1,10 @@
 
 const convertToLi = (pokemon) => {
     return `
-        <li class="pokemon_child -${pokemon.principalType}">
+        <li class="pokemon_child -${pokemon.principalType}" key=${pokemon.id} onClick=showDetail(this)>
             <span id="index">#${pokemon.id}</span>
             <div id="boxImage">
+                <img src="./assets/images/pokeball.png" alt="icon_pokeball" id="pokeball_child">
                 <img src="${pokemon.icon}" alt="icon_${pokemon.name}">
             </div>
         </li>
@@ -32,7 +33,7 @@ document.querySelector('#btn_apply').addEventListener('click', (e) => {
 })
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e) => {
     pokeApiManager.getPokemon(inputOffSet.value, inputLimit.value).then((pokemons) => {
         parentPokedex.innerHTML = ""
 
